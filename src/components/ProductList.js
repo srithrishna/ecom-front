@@ -7,8 +7,12 @@ const ProductList = ({ addToCart }) => {
 
   useEffect(() => {
     axios.get('http://localhost:5000/products')
-      .then(response => setProducts(response.data))
-      .catch(error => console.error('Error fetching products:', error));
+      .then(response => {
+        setProducts(response.data);
+      })
+      .catch(error => {
+        console.error('There was an error fetching the products!', error);
+      });
   }, []);
 
   return (

@@ -3,8 +3,7 @@ import ProductList from '../components/ProductList';
 
 const HomePage = ({ addToCart }) => {
   return (
-    <div>
-      <h2>Products</h2>
+    <div className="home-page">
       <ProductList addToCart={addToCart} />
     </div>
   );
